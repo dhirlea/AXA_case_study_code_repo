@@ -1,0 +1,14 @@
+data_read_path: data/transcripts_v3
+data_save_path: data/transcripts_dataset.csv
+predictions_path: data/transcripts_predictions.csv
+exhibits_path: data/exhibits
+prediction_cols: ['file_name', 'raw_transcript', 'member_dialogue', 'sentiment_prediction', 'outcome_prediction']
+agent_prompts_path: prompts/agent_prompts.yaml
+model_id: meta-llama/Llama-3.2-1B-Instruct
+sentiment_pipeline:
+  task: text-generation
+  model: model_id
+  device_map: auto
+  temperature: 0.2
+  return_full_text: True
+  max_new_tokens: 512

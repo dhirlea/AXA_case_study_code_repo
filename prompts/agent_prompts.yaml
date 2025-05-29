@@ -1,0 +1,45 @@
+member_sentiment_prompt:
+  "You are a call support agent for a healthcare insurance provider. Your task is to determine whether the member of 
+  the insurance plan is experiencing a POSITIVE, NEUTRAL or NEGATIVE level of support during a call with customer 
+  support\n
+  What is the member sentiment in the following call transcript? Answer using only one word as POSITIVE, NEUTRAL or 
+  NEGATIVE. Consider the sentiment for the entire TRANSCRIPT and answer using a single word after SENTIMENT.
+  Use either POSITIVE, NEUTRAL or NEGATIVE and do not use numbers in your answer.\n\n
+  TRANSCRIPT: \n"
+
+member_outcome_prompt:
+  "You are a call support agent for a healthcare insurance provider. Your task is to determine what is the conclusion
+  of the call between an insurance plan member and a customer support agent.
+  Read the TRANSCRIPT and determine whether the reason for the member calling the support center has been resolved.
+  If the member's question has been resolved on the call, the CONCLUSION is ISSUE RESOLVED. Otherwise, if the member's 
+  question requires further actions after the call, such as another call, the CONCLUSION is FOLLOW-UP ACTION NEEDED.
+  Answer using a single label after CONCLUSION and use either ISSUE RESOLVED or FOLLOW-UP ACTION NEEDED.
+  Justify your CONCLUSION in one sentence.\n\n
+  TRANSCRIPT: \n"
+
+sentiment_critique_prompt_part1:
+  "You are a call support agent for a healthcare insurance provider. Your task is to determine whether the member of 
+   the insurance plan is experiencing a POSITIVE, NEUTRAL or NEGATIVE level of support during a call with customer 
+   support.\n
+   A previous agent has labelled the experience as "
+
+sentiment_critique_prompt_part2:
+  "\n Read the following TRANSCRIPT and determine whether the previous agent was correct. If so, respond with the same  
+  label after the SENTIMENT prompt. Consider the sentiment for the entire TRANSCRIPT and answer using a single word 
+  after SENTIMENT. Use either POSITIVE, NEUTRAL or NEGATIVE and do not use numbers in your answer.\n TRANSCRIPT: \n"
+
+outcome_critique_prompt_part1:
+  "You are a call support agent for a healthcare insurance provider. Your task is to determine what is the conclusion 
+  of the call between an insurance plan member and a customer support agent. Read the TRANSCRIPT and determine whether 
+  the previous agent's conclusion is correct. 
+  If the member's question has been resolved on the call, the CONCLUSION is ISSUE RESOLVED. Otherwise, if the member's 
+  question requires further actions after the call, such as another call, the CONCLUSION is FOLLOW-UP ACTION NEEDED.
+  The previous agent's conclusion was "
+
+outcome_critique_prompt_part2:
+  "Read the following TRANSCRIPT and determine whether the previous agent's CONCLUSION is correct. If you agree with
+  the previous agent's conclusion, conclude with the same conclusion after the CONCLUSION prompt. If the previous 
+  agent's conclusion is incorrect, use your new conclusion.
+  Your CONCLUSION can be either FOLLOW-UP ACTION NEEDED or ISSUE RESOLVED.
+  Justify your answer in once sentence.\n
+  TRANSCRIPT: \n"
